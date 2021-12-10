@@ -1,0 +1,40 @@
+{
+  "title": "Spotify Rewire",
+  "rules": [
+    {
+      "description": "Maps the play pause media key to an osa script. Before working you need to disable the rcp helper which effectively breaks the play pause keys normal function\n$ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist  \n",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "f7" },
+          "to": [
+            {
+              "shell_command": "/Users/ralphcallaway/Development/spotify_play_pause/prevtrack.sh",
+              "repeat": false
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f8" },
+          "to": [
+            {
+              "shell_command": "/Users/ralphcallaway/Development/spotify_play_pause/playpause.sh",
+              "repeat": false
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "f8" },
+          "to": [
+            {
+              "shell_command": "/Users/ralphcallaway/Development/spotify_play_pause/nextrack.sh",
+              "repeat": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
