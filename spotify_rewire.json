@@ -26,10 +26,10 @@
         },
         {
           "type": "basic",
-          "from": { "key_code": "f8" },
+          "from": { "key_code": "f9" },
           "to": [
             {
-              "shell_command": "/Users/ralphcallaway/Development/spotify_play_pause/nextrack.sh",
+              "shell_command": "/Users/ralphcallaway/Development/spotify_play_pause/nexttrack.sh",
               "repeat": false
             }
           ]
